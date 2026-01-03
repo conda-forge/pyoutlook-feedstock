@@ -1,5 +1,5 @@
 {% set name = "pyOutlook" %}
-{% set version = "4.2.2" %}
+{% set version = "4.2.3" %}
 
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyOutlook-{{ version }}.tar.gz
-  sha256: ece13be06a87c613185790e4e73a83e68fe81769a2667a9b5b4cddd056578cae
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | lower }}-{{ version }}.tar.gz
+  sha256: 50c6f7c00a00ae4a088df53480c06f20d75f44076ee5f34920e12cf6fe115cd8
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
